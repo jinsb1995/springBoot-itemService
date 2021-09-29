@@ -94,6 +94,7 @@ public class BasicItemController {
         Item savedItem = itemRepository.save(item);
         redirectAttributes.addAttribute("itemId", savedItem.getId());
         redirectAttributes.addAttribute("status", true);
+        // redirectAttribute에 있는 attributeName 을 밑에처럼 사용할 수 있다.
         return "redirect:/basic/items/{itemId}";
     }
 
